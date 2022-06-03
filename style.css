@@ -1,0 +1,31 @@
+.letters{
+display: inline-block;
+color: #242526;
+height: 100px;
+font-family: Andale Mono,AndaleMono,monospace; 
+font-size: 70px;
+}
+.letter{
+    display: inline-block;
+    color: #242526;
+    font-family: Andale Mono,AndaleMono,monospace; 
+    }
+#container{
+    text-align: center;
+}
+#reset{
+    border-radius: 10px;
+}
+#container2{
+    text-align: center;
+}
+.sections{
+    border: 1px solid #242526;
+    width: 32vw;
+    height: 300px;
+    display: inline-block;
+    text-align: center;
+}
+#bodydiv{
+    display: inline-block; 
+}

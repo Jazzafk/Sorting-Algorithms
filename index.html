@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container">
+   <h2 id="l1" class="letters">-</h2>
+   <h2 id="l2" class="letters">-</h2>
+   <h2 id="l3" class="letters">-</h2>
+   <h2 id="l4" class="letters">-</h2>
+   <h2 id="l5" class="letters">-</h2>
+   <h2 id="l6" class="letters">-</h2>
+   <h2 id="l7" class="letters">-</h2>
+</div>
+<div id="container2">
+<button id="reset">Play Animation Again</button>
+</div>
+<br>
+<div id="bodydiv">
+<div id="merge" class="sections">
+   <h2 id = 'mergetxt' class="letter">Merge</h2>
+   <br>
+   <input id="merge_input" type="text">
+   <button id ='merge_button'>Sort</button>
+
+
+</div>
+<div id="insertion" class="sections">
+   <h2 id = 'insertiontxt' class="letter">Insertion</h2>
+   <br>
+   <input id="insertion_input" type="text">
+   <button id ='insertione_button'>Sort</button>
+
+</div>
+<div id="bubble" class="sections">
+   <h2 id = 'bubbletxt' class="letter">Bubble</h2>
+   <br>
+   <input id="bubble_input" type="text">
+   <button id ='bubble_button'>Sort</button>
+
+
+</div>
+
+</div>
+<script>
+
+const sleep = (time) => {
+  return new Promise((resolve) => setTimeout(resolve, time))
+}
+
+
+function bruteForce(){
+alphabet = ["a","#","c","&","e","$","g","?","i","*","k","%","~","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+names = ['l1', 'l2', 'l3', 'l4', 'l5', 'l6', 'l7']
+ans = ['s', 'o', 'r', 't', 'i', 'n', 'g']
+Finalans = ['S', 'O', 'R', 'T', 'I', 'N', 'G']
+current_leter = 0;
+count = 0;
+
+const toCaps = async () => {
+
+   for(j=0; j<7; j++){
+      await sleep(50)
+var letter = Finalans[j]
+var name = names[j]
+document.getElementById(name).innerHTML = letter
+   }
+}
+  
+
+
+function run(){
+
+   if (current_leter>6){
+   clearInterval(myinterval)
+   toCaps()
+}
+
+
+        var current_scroll = alphabet[count]
+       // console.log(current_leter)
+       // console.log(count)
+        if (current_scroll != undefined){
+        document.getElementById(names[current_leter]).innerHTML = current_scroll
+        }
+        if (current_scroll==ans[current_leter]){
+           current_leter = current_leter + 1
+           count = count + 1;
+           return
+        }
+        if (count<26){
+           count = count + 1
+        } 
+       else {
+      count = 0
+       }
+//console.log (current_leter)
+}
+
+myinterval = setInterval(run,40);
+
+}
+
+
+bruteForce()
+
+document.getElementById('reset').addEventListener('click', function(){
+   for (i=0; i<7; i++){
+      var ele = document.getElementById(names[i])
+      ele.innerHTML = '-'
+   }
+   bruteForce()
+})
+
+   </script>
+    
+</body>
+</html>
