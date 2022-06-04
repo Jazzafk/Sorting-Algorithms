@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+
+
 <div id="container">
    <h2 id="l1" class="letters">-</h2>
    <h2 id="l2" class="letters">-</h2>
@@ -27,6 +30,7 @@
    <br>
    <input id="merge_input" type="text">
    <button id ='merge_button'>Sort</button>
+   <h3 id="merge_result" class="result">----</h3>
 
 
 </div>
@@ -34,7 +38,8 @@
    <h2 id = 'insertiontxt' class="letter">Insertion</h2>
    <br>
    <input id="insertion_input" type="text">
-   <button id ='insertione_button'>Sort</button>
+   <button id ='insertion_button'>Sort</button>
+   <h3 id="insertion_result" class="result">----</h3>
 
 </div>
 <div id="bubble" class="sections">
@@ -42,6 +47,7 @@
    <br>
    <input id="bubble_input" type="text">
    <button id ='bubble_button'>Sort</button>
+   <h3 id="bubble_result" class="result">----</h3>
 
 
 </div>
@@ -76,7 +82,7 @@ document.getElementById(name).innerHTML = letter
 
 function run(){
 
-   if (current_leter>6){
+   if (current_leter>5){
    clearInterval(myinterval)
    toCaps()
 }
@@ -118,6 +124,11 @@ document.getElementById('reset').addEventListener('click', function(){
 })
 
    </script>
+
+
+<script src="merge.js"></script>
+<script src="insertion.js"></script>
+<script src="bubble.js"></script>
     
 </body>
 </html>

@@ -25,7 +25,12 @@ font-size: 70px;
     height: 300px;
     display: inline-block;
     text-align: center;
+    word-wrap: break-word;
 }
 #bodydiv{
     display: inline-block; 
+}
+.result{
+    color: #242526;
+    font-family: Andale Mono,AndaleMono,monospace; 
 }
