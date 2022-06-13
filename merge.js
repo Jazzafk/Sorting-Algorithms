@@ -30,8 +30,6 @@ for (j=0; j<max; j++){
 
 }
 
-
-
 function merge(arr1, arr2, index){
 
     console.log('sorting ' + arr1+ ' & '+ arr2 + 'with index ' + index)
